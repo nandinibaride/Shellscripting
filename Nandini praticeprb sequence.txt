@@ -1,0 +1,371 @@
+*SEQUENCE PRATICE PROBLEM
+1>
+#!/bin/bash -x
+random=$((RANDOM%9+1))
+echo $random
+
+2> use random to get dice number between 1 to 6
+
+#!/bin/bash -x
+random=$((RANDOM%6+1))
+echo $random
+
+3> Add two number dice and print the read 
+#!/bin/bash -x
+random1=$((RANDOM%6+1))
+random2=$((RANDOM%6+1))
+
+echo $random1
+echo $random2
+
+sum=$(($random1+$random2))
+echo "sum of two random number:" $sum
+
+4> write a program that reads 5 random 2 digit values , then find their sum and the average
+ #! /bin/bash -x
+  maxvalue=99
+  minvalue=10
+  for random in 1 2 3 4 5
+  do
+          random=$(( RANDOM%($maxvalue-$minvalue)+$minvalue+1 ))
+          echo $random
+          sum=$(( sum + random ))
+         avg=$(( sum/5 ))
+
+ echo "The sum of 5 random number:" $sum
+ echo "The average of 5 random number:" $average
+
+  
+
+5> UNIT CONVERSION
+
+  1. 1ft=12in then 42in= 3.5Ft
+  2. 731.52meter
+  3. 60 - 18.288m
+     40 - 12.192m
+     =222.9672 m^2
+     25 * 222.9672 = 5574.1824 m^2
+     1.37741047 acre
+
+
+* SELECTION PRATICE PROBLEM WITH IF & ELSE
+1> #! /bin/bash -x
+a=$(( (RANDOM%900) +100 ))
+b=$(( (RANDOM%900) +100 ))
+c=$(( (RANDOM%900) +100 ))
+d=$(( (RANDOM%900) +100 ))
+e=$(( (RANDOM%900) +100 ))
+
+if [ $a -gt $b ] && [ $a -gt $C ] && [ $a -gt $d ] && [ $a -gt $e ]
+then
+       echo $a
+elif [ $b -gt $a ] && [ $b -gt $c ] && [ $b -gt $d ] && [ $b -gt $e ]
+then
+       echo $b
+elif [ $c -gt $a ] && [ $c -gt $b ] && [ $c -gt $d ] && [ $c -gt $e ]
+then
+       echo $c
+elif [ $d -gt $a ] && [ $d -gt $b ] && [ $d -gt $c ] && [ $d -gt $e ]
+then
+       echo $d
+else
+       echo $e
+fi
+
+if [ $a -lt $b ] && [ $a -lt $C ] && [ $a -lt $d ] && [ $a -lt $e ]
+then
+       echo $a
+elif [ $b -lt $a ] && [ $b -lt $c ] && [ $b -lt $d ] && [ $b -lt $e ]
+then
+       echo $b
+elif [ $c -lt $a ] && [ $c -lt $b ] && [ $c -lt $d ] && [ $c -lt $e ]
+then
+       echo $c
+elif [ $d -lt $a ] && [ $d -lt $b ] && [ $d -lt $c ] && [ $d -lt $e ]
+then
+       echo $d
+else
+       echo $e
+fi
+
+
+2> /bin/bash -x
+read -p "Enter the Date:" date
+read -p "Enter the Month:" month
+
+if [ $month -le 6 ] && [ $date -le 20 ]
+then
+  echo $month $date "true"
+
+elif [ $month -ge 3 ] && [ $month -lt 6 ] && [ $date -lt 31 ]
+then
+  echo $date $month "true"
+else
+      echo "false"
+fi
+
+3> Write a program that takes a year as input and outputs the Year is a Leap Year or not
+a Leap Year. A Leap Year checks for 4 Digit Number, Divisible by 4 and not 100 unless
+divisible by 400.
+
+read -p " Enter the year:" year
+if [[ $year%4 -eq 0 && $year%100 -ne 0 || $year%400 -eq 0 ]]
+then
+        echo "$year is a leap year"
+else
+        echo "$year is not a leap year"
+fi
+
+
+
+4>Write a program to simulate a coin flip and print out "Heads" or "Tails" accordingly.
+
+coin=$((RANDOM%2))
+
+if [ $coin -eq 0 ]
+then
+      echo " this is head "
+else
+      echo " this is tail "
+fi
+
+
+* Selection Practice Problems with if, elif and else
+
+1> #! /bin/bash -x
+
+read -p " Enter the number: " word
+
+if [ $word -eq 0 ]
+then
+       echo " zero "
+elif [ $word -eq 1 ]
+then
+       echo " one "
+
+elif [ $word -eq 2 ]
+then
+       echo " two"
+elif [ $word -eq 3 ]
+then
+       echo " three "
+elif [ $word -eq 4 ]
+then
+       echo " four "
+elif [ $word -eq 5 ]
+then
+       echo " five "
+elif [ $word -eq 6 ]
+then
+       echo " six "
+elif [ $word -eq 7 ]
+then
+       echo " seven"
+elif [ $word -eq 8 ]
+then
+       echo " eight"
+elif [ $word -eq 9 ]
+then
+       echo " nine "
+else
+         echo " enter value between 0 to 9 "
+fi
+
+
+2> Read a Number and Display the week day (Sunday, Monday,...)
+ read -p " Enter the number: " day
+
+if [ $day -eq 0 ]
+then
+       echo " sunday "
+elif [ $day -eq 1 ]
+then
+       echo " monday"
+
+elif [ $day -eq 2 ]
+then
+       echo " tuesday"
+elif [ $day -eq 3 ]
+then
+       echo " wensday "
+elif [ $day -eq 4 ]
+then
+       echo " thruday"
+elif [ $day -eq 5 ]
+then
+       echo " friday "
+elif [ $day -eq 6 ]
+then
+       echo " saturday "
+
+else
+         echo " enter value between 0 to 6 "
+fi
+
+
+3> Read a Number 1, 10, 100, 1000, etc and display unit, ten, hundred,
+
+ #! /bin/bash -x
+
+read -p " Enter the number: " unity
+
+if [ $unity -eq 1 ]
+then
+       echo "one"
+elif [ $unity -eq 10 ]
+then
+       echo " ten"
+
+elif [ $unity -eq 100 ]
+then
+       echo " hundred"
+elif [ $unity -eq 1000 ]
+then
+       echo " thousand "
+fi
+
+4> Enter the three number following arthematic operation.......
+a=6
+b=4
+c=2
+
+result1=$(( $a + $b * $c ))
+result2=$(( $a % $b + $c ))
+result3=$(( $c + $a / $b ))
+result4=$(( $a * $b + $c ))
+
+if [ $result1 -gt $result2 ] && [ $result1 -gt $result3 ] && [ $result1 -gt $result4 ]
+then
+      echo $result1
+elif [ $result2 -gt $result1 ] && [ $result2 -gt $result3 ] && [ $result2 -gt $result4 ]
+then
+      echo $result2
+elif [ $result3 -gt $result1 ] && [ $result3 -gt $result2 ] && [ $result3 -gt $result4 ]
+then
+      echo $result3
+else
+      echo $result4
+fi
+
+
+#case
+1> read a single digit number and write the number in word using case
+  #! /bin/bash -x
+ 
+  read -p "Enter your choice:" choice
+ 
+  case $choice in
+          1)
+                  echo "One" ;;
+          2)
+                  echo "Two" ;;
+         3)
+                 echo "Three" ;;
+         4)
+                 echo "Four" ;;
+         5)
+                 echo "Five" ;;
+         6)
+                 echo "six" ;;
+         7)
+                 echo "Seven" ;;
+         8)
+                 echo "Eight" ;;
+         9)
+                 echo "Nine" ;;
+         10)
+                 echo "Numbers must be less than 10"
+ esac
+
+2>read a number and display the week day using case
+  #! /bin/bash -x
+ 
+  read -p "Enter your choice:" choice
+ 
+  case $choice in
+          1)
+                  echo "sunday" ;;
+         2)
+                  echo "Monday" ;;
+         3)
+                 echo "Tuesday" ;;
+         4)
+                 echo "Wednesday" ;;
+         5)
+                 echo "Thursday" ;;
+         6)
+                 echo "Friday" ;;
+         7)
+                 echo "Saturday" ;;
+         8)
+                 echo "Numbers must be less than 8" ;;
+esac
+
+3>read a number 1,10,100,1000, etc and display unit, ten,hundred,.... using case
+  #! /bin/bash -x
+  read -p "Enter your choice:" choice
+  #selection
+  case $choice in
+          0)
+                  echo "unit" ;;
+          1)
+                  echo "One" ;;
+         10)
+                 echo "Ten" ;;
+         100)
+                 echo "Hundred" ;;
+         1000)
+                 echo "Thousand" ;;
+         10000)
+ esac
+
+
+4>write a program that takes user input and does unit conversion of different lenght unit 1.feet to inch 2.inch to feet 3.feet to meter 4.meter to feet
+  #! /bin/bash -x
+   read -p "Enter your choice:" choice
+  #selection
+  echo "1) Feet to inch"
+  echo "2) Feet to meter"
+  echo "3) inch to Feet"
+  echo "4) Meter to Feet"
+ 
+ case $choice in
+          1)
+                 read -p "Enter the distance in feet:" feet
+                 echo $(( $feet*12 )) "inches" ;;
+          2)
+                 read -p "Enter the distance in inches:" inches
+                 echo $(( $inches/12 )) "feet" ;;
+          3)
+                 read -p "Enter the distance in feet:" feet
+                 echo $(( $feet*0.3048 )) "meter" ;;
+          4)
+                 read -p "Enter the distance in meter:" meter
+                 echo $(( $feet*3.2808 )) "feet" ;;
+         *)
+                 echo "Enter a Value Between 1 to 4 " ;;
+ esac
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
